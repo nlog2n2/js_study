@@ -14,7 +14,12 @@
             }
             
             // window の読み込み完了イベント監視
-            window.addEventListener("click",addText,false);
+            window.addEventListener("load",function(event){
+                var button = document.getElementById("change-text");
+                
+                // クリックイベントを監視
+                button.addEventListener("click",addText,false);
+            }, false);
         </script>
 
     </head>
