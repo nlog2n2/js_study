@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>テキストを追加する</title>
+        <script>
+            // テキストを追加する関数
+            function addText(){
+                var box   = event.target.parentNode;
+                var pNode = document.createElement('p');
+
+                pNode.innerHTML = 'テキストが追加されました';
+                box.appendChild(pNode);
+            }
+            
+            // window の読み込み完了イベント監視
+            window.addEventListener("click",addText,false);
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <button id="change-text">テキストを追加する</button>
+        </div>
+    </body>
+</html>
